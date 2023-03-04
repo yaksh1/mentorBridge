@@ -24,6 +24,7 @@ class Lists extends StatelessWidget {
     );
   }
 
+// when you want to add a task group
   Widget _buildAddTask() {
     return DottedBorder (
       borderType: BorderType.RRect,
@@ -41,6 +42,7 @@ class Lists extends StatelessWidget {
     );
   }
 
+// styling task groups
   Widget _buildTask(BuildContext context, Task task) {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 5),
@@ -74,7 +76,7 @@ class Lists extends StatelessWidget {
         ));
   }
 
-  // task status widget
+// task status widget
   Widget _buildTaskStatus(Color bgColor, Color txColor, String text) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),

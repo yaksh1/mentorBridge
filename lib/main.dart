@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mento/screens/home/home.dart';
 
+import 'screens/login page/login.dart';
+import 'screens/sign up page/signup.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tasks app',
-      home: HomePage(),
+      home: signup_page(),
     );
   }
 }

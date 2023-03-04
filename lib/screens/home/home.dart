@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mento/screens/home/widgets/myTasks.dart';
-
+import 'package:flutter/gestures.dart';
 import 'widgets/lists.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,13 +15,16 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // "My tasks text"
           MyTasks(),
           Expanded(
+            // how all the tasks are made
             child: Lists(),
           )
         ],
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
+      // our main floating button
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -30,6 +33,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
+//  styling and positioning bottom menu bar
   Widget _buildBottomNavigationBar() {
     return Container(
         decoration: BoxDecoration(
@@ -54,19 +58,26 @@ class HomePage extends StatelessWidget {
               showUnselectedLabels: false,
               selectedItemColor: Colors.grey.withOpacity(0.5),
               unselectedItemColor: Colors.grey.withOpacity(0.5),
+              // currentIndex: _currentIndex,
+              // onTap: (index) {
+              //   setState(() => _currentIndex = index);
+              //   _loadScreen();
+              // },
               items: [
                 BottomNavigationBarItem(
                     label: 'Home', icon: Icon(Icons.home_rounded, size: 30)),
+    
                 // BottomNavigationBarItem(
                 //     label: 'search', icon: Icon(Icons.search_rounded, size: 30)),
                 BottomNavigationBarItem(
-                    label: 'Messages', icon: Icon(Icons.chat_bubble_rounded, size: 30)),
+                    label: 'Messages', icon: Icon(Icons.person_rounded, size: 30)),
                 // BottomNavigationBarItem(
                 //     label: 'Tasks', icon: Icon(Icons.task_rounded, size: 30))
               ],
             )));
   }
 
+// our logo at top left
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
@@ -94,3 +105,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+//  
